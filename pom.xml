@@ -12,6 +12,8 @@
         <module>Concurrency</module>
         <module>webservice-cxf</module>
         <module>java-demos</module>
+        <module>java-spring</module>
+        <module>design-patterns</module>
 
     </modules>
 
