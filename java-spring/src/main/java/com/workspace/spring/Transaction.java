@@ -7,9 +7,11 @@ public class Transaction {
 
     Retailer retailer;
 
-    public Transaction(Retailer retailer) {
-        this.retailer = retailer;
-    }
+
+//
+//    public Transaction(Retailer retailer) {
+//        this.retailer = retailer;
+//    }
 
     public void setRetailer(Retailer retailer) {
         this.retailer = retailer;

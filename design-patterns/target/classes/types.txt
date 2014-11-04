@@ -1,0 +1,10 @@
+
+1. Singleton
+2. Builder
+3. Observer
+4. MVC
+5. Adaptor
+6. Factory & Abstract Factory
+7. Facade
+9. Decorator
+10.DAO and DTO

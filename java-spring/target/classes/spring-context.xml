@@ -4,12 +4,7 @@
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 
-    <bean id="transBean" class="com.workspace.spring.Transaction">
-        <property name="retailer">
-            <ref bean="flipkart"/>
-        </property>
-    </bean>
-
-    <bean id="flipkart" class="com.workspace.spring.Flipkart"/>
+    <bean id="transBean" class="com.workspace.spring.Transaction" autowire="byName"/>
+    <bean id="retailer" class="com.workspace.spring.Flipkart"/>
 
 </beans>
