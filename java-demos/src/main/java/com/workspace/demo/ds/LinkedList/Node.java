@@ -1,4 +1,4 @@
-package com.workspace.demo.LinkedList;
+package com.workspace.demo.ds.LinkedList;
 
 /**
  * Created by deepak on 10/27/14.

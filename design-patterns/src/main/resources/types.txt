@@ -8,3 +8,7 @@
 7. Facade
 9. Decorator
 10.DAO and DTO
+11.Strategy Pattern
+12.State pattern
+13.Mediator
+14.

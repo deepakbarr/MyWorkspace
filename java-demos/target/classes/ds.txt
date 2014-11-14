@@ -1,0 +1,20 @@
+
+
+LinkedList
+------------
+1. Find cycle in LL, start of cycle, length of cycle.
+2. Reverse LL.
+3. Insert into sorted LL.
+4. Check if LL is palindrome.
+5. Merge point of LL
+
+
+Stack
+------------
+1. Min in stack.
+2. Reverse a stack
+...
+
+
+
+
