@@ -7,6 +7,22 @@ public class SelectionSort {
 
     private void selectionSort(int[] arr) {
 
+        int len = arr.length;
+        int min,minIdx;
+
+        for (int i = 0; i < len - 1; i++) {
+            min = arr[i];
+            for (int j = i + 1; j < len; j++) {
+
+                if (arr[j] < min) {
+                    min = arr[j];
+                }
+
+            }
+
+
+        }
+
 
     }
 

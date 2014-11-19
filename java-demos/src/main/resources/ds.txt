@@ -15,6 +15,7 @@ Stack
 2. Reverse a stack
 ...
 
+Queue
 
 
 

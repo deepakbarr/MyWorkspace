@@ -5,6 +5,18 @@ package com.workspace.design.factory;
  */
 public class ConnectionFactory {
 
+
+    private ConnectionFactory connectionFactory;
+
+    private ConnectionFactory() {
+    }
+
+    public ConnectionFactory getInstance() {
+        if (connectionFactory == null)
+            connectionFactory = new ConnectionFactory();
+        return connectionFactory;
+    }
+
     public Connection getConnection(String db) {
         if (db.equals("pg"))
             return new PgSqlConn();
