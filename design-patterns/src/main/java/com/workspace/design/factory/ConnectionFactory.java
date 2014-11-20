@@ -6,12 +6,12 @@ package com.workspace.design.factory;
 public class ConnectionFactory {
 
 
-    private ConnectionFactory connectionFactory;
+    private static ConnectionFactory connectionFactory;
 
     private ConnectionFactory() {
     }
 
-    public ConnectionFactory getInstance() {
+    public static ConnectionFactory getInstance() {
         if (connectionFactory == null)
             connectionFactory = new ConnectionFactory();
         return connectionFactory;

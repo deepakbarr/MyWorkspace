@@ -13,7 +13,7 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        ConnectionFactory connectionFactory = new ConnectionFactory();
+        ConnectionFactory connectionFactory = ConnectionFactory.getInstance();
 
         Connection conn = connectionFactory.getConnection("pg");
         conn.connect();

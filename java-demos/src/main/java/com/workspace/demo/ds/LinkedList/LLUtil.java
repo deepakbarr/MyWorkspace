@@ -56,4 +56,10 @@ public class LLUtil {
         System.out.println("Size = " + list.getSize());
     }
 
+    public static LinkedList<Integer> createDummyList(int size) {
+        LinkedList<Integer> list = new LinkedList<Integer>();
+        for (int i = 1; i <= size; i++)
+            list.add(i);
+        return list;
+    }
 }

@@ -16,7 +16,7 @@ public class BSTree<T extends Comparable> {
     }
 
     public void insert(T element) {
-        root=insert(root, element);
+        root = insert(root, element);
     }
 
     private TreeNode<T> insert(TreeNode<T> root, T data) {
@@ -31,12 +31,53 @@ public class BSTree<T extends Comparable> {
         return root;
     }
 
-    public boolean search() {
-        return true;
+    public boolean search(T data) {
+        return search(root, data);
     }
 
-    public void delete() {
+    private boolean search(TreeNode<T> root, T data) {
+        if (root == null)
+            return false;
+        if (root.getData().compareTo(data) == 0) {
+            return true;
+        } else {
+
+            if (root.getData().compareTo(data) > 0)
+                return search(root.getLeft(), data);
+            else return search(root.getRight(), data);
+        }
     }
+
+
+    public void delete(T data) {
+//        delete(root, data);
+    }
+
+
+//    private TreeNode<T> delete(TreeNode<T> root, T data) {
+//
+//        if (root == null)
+//            return null;
+//
+//        if (root.getData().compareTo(data) > 0) {
+//            return delete(root.getLeft(), data);
+//        } else if (root.getData().compareTo(data) < 0) {
+//            return delete(root.getRight(), data);
+//        } else {
+//
+//            if (root.getLeft() != null && root.getRight() != null) {
+//                TreeNode<Integer> maxLeft = BSTUtil.findMaxNode(root.getLeft());
+//
+//                T temp=root.getData();
+//                root.setData((maxLeft.getData());
+//
+//            }
+//
+//        }
+//
+//    }
+//
+//}
 
     public void display() {
     }

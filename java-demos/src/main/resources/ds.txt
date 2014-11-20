@@ -17,5 +17,19 @@ Stack
 
 Queue
 
+Dp
+
+http://programming4interviews.wordpress.com/2011/08/13/find-max-sum-of-sub-array-for-given-array-of-integers/
+public static int findMaxProfit(int[] stockPriceSamples) {
+	int maxProfit = 0;
+	int minTillNow = stockPriceSamples[0];
+	for (int i = 0; i < stockPriceSamples.length; i++) {
+		int profit = stockPriceSamples[i] - minTillNow;
+		maxProfit = Math.max(profit, maxProfit);
+		minTillNow = Math.min(stockPriceSamples[i], minTillNow);
+	}
+	return maxProfit;
+}
+
 
 

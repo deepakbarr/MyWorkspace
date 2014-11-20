@@ -21,7 +21,6 @@ public class Main {
         System.out.println("levelorder");
         BSTUtil.levelOrder(tree.getRoot());
 
-
         int size = BSTUtil.sizeOfBT(tree.getRoot());
         System.out.println("size = " + size);
 
@@ -35,5 +34,18 @@ public class Main {
         System.out.println("flag = " + flag);
         flag = BSTUtil.search(tree.getRoot(),100);
         System.out.println("flag = " + flag);
+
+        BSTree<Integer> tree2=BSTUtil.createDummyTree(10);
+
+        System.out.println("BSTUtil.areSimilar(null,null) = " + BSTUtil.areSimilar(null, null));
+        System.out.println("BSTUtil.areSimilar(null,tree) = " + BSTUtil.areSimilar(null, tree.getRoot()));
+        System.out.println("BSTUtil.areSimilar(1,2) = " + BSTUtil.areSimilar(tree.getRoot(), tree2.getRoot()));
+
+        System.out.println("sum=11 = " + BSTUtil.subSum(tree.getRoot(),11));
+        System.out.println("sum=11 = " + BSTUtil.subSum(tree.getRoot(), 55));
+        System.out.println("tree.search(8) = " + tree.search(8));
+        System.out.println("tree.search(11) = " + tree.search(11));
+        System.out.println("tree.search(11) = " + tree.search(10));
+
     }
 }
