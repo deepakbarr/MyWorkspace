@@ -6,11 +6,11 @@
 5. Adaptor
 6. Factory & Abstract Factory
 7. Facade
-9. Decorator
-10.DAO and DTO
-11.Strategy Pattern
-12.State pattern
-13.Mediator
+8. Decorator
+9. DAO and DTO
+10.Strategy Pattern
+11.State pattern
+12.Mediator
 
 
 Singleton,factory,Decorator,Builder,Adaptor,Strategy

@@ -1,0 +1,12 @@
+
+
+1. One string containing all characters of the other string
+http://www.geeksforgeeks.org/find-the-smallest-window-in-a-string-containing-all-characters-of-another-string/
+
+2. http://www.geeksforgeeks.org/find-first-non-repeating-character-stream-characters/
+
+3. http://www.crazyforcode.com/pythagorean-triplets-array/
+
+4. http://www.geeksforgeeks.org/given-a-number-find-next-smallest-palindrome-larger-than-this-number/
+
+5. Snake ladder http://www.geeksforgeeks.org/snake-ladder-problem-2/

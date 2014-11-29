@@ -1,0 +1,5 @@
+
+Enums
+http://tutorials.jenkov.com/java/enums.html
+
+Iterator -fail safe and stuff

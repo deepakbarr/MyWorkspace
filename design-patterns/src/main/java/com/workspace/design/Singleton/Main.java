@@ -13,5 +13,11 @@ public class Main {
         System.out.println("obj1 = " + obj1.toString());
         System.out.println("obj2 = " + obj2.toString());
 
+        System.out.println("obj1 name = " + obj1.getName());
+        
+        SingletonEnum obj3=SingletonEnum.INSTANCE;
+
+        System.out.println("obj3.getName() = " + obj3.getName());
+
     }
 }

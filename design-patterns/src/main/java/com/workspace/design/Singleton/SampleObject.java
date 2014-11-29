@@ -5,14 +5,20 @@ package com.workspace.design.Singleton;
  */
 public class SampleObject {
 
+    String name;
     public static SampleObject obj;
 
-    private SampleObject() {
+    private SampleObject(String hello) {
+        this.name=hello;
     }
 
     public synchronized static SampleObject getInstance() {
         if (obj == null)
-            obj = new SampleObject();
+            obj = new SampleObject("Hello");
         return obj;
+    }
+
+    public String getName() {
+        return name;
     }
 }

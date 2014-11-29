@@ -14,7 +14,7 @@
         <module>java-demos</module>
         <module>java-spring</module>
         <module>design-patterns</module>
-
+        <module>code-design</module>
     </modules>
 
 

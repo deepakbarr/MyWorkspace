@@ -1,0 +1,15 @@
+
+Super impose
+
+http://www.dsalgo.com/2013/02/superimpose-binary-tree.html
+
+private static Node superImpose(Node below, Node above)
+ {
+  if (above == null)
+   return below;
+  if (below == null)
+   return above;
+  above.left = superImpose(below.left, above.left);
+  above.right = superImpose(below.right, above.right);
+  return above;
+ }
