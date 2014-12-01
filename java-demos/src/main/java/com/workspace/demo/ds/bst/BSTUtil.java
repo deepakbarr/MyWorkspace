@@ -127,4 +127,43 @@ public class BSTUtil {
             return subSum(root.getRight(), k) || subSum(root.getLeft(), k);
         }
     }
+
+    public static TreeNode<Integer> buildTree(int[] arr, int left, int right) {
+
+        if (left <= right) {
+            int mid = (left + right) / 2;
+            TreeNode<Integer> root = new TreeNode<Integer>(arr[mid]);
+            root.setLeft(buildTree(arr, left, mid - 1));
+            root.setRight(buildTree(arr, mid + 1, right));
+            return root;
+        }
+        return null;
+    }
+
+    public static int depth(TreeNode<Integer> root) {
+        if (root == null)
+            return 0;
+        else {
+            int left = depth(root.getLeft());
+            int right = depth(root.getRight());
+            return Math.max(left, right) + 1;
+        }
+    }
+
+    public static boolean isBalanced(TreeNode<Integer> root) {
+        if (root == null)
+            return true;
+        else {
+            int left = depth(root.getLeft());
+            int right = depth(root.getRight());
+
+            if (Math.abs(right - left) > 1)
+                return false;
+
+            if (!isBalanced(root.getLeft()) || !isBalanced(root.getRight()))
+                return false;
+            return true;
+        }
+    }
+
 }
