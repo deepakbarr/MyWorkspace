@@ -14,40 +14,34 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        Stack<Integer> stack = new Stack<Integer>();
-
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
-        stack.push(5);
-        stack.push(6);
-        stack.push(7);
-        stack.push(8);
-
-        print(stack);
+        Stack<Integer> stack = StackUtil.getDummyStack();
+        StackUtil.print(stack);
+        stack = StackUtil.sort(stack);
+        StackUtil.print(stack);
+        stack=StackUtil.reverse(stack);
+        StackUtil.print(stack);
 
         try {
-            Node<Integer> poppedNode = stack.pop();
-            System.out.println("poppedNode.getData() = " + poppedNode.getData());
-            print(stack);
+            int val = stack.pop();
+            System.out.println("val = " + val);
 
-            poppedNode = stack.pop();
-            System.out.println("poppedNode.getData() = " + poppedNode.getData());
-            print(stack);
+            StackUtil.print(stack);
+            val = stack.pop();
+            System.out.println("val = " + val);
+            StackUtil.print(stack);
 
-            Node<Integer> topNode = stack.top();
-            System.out.println("topNode.getData() = " + topNode.getData());
-            print(stack);
+            int top = stack.top();
+            System.out.println("top = " + top);
+            StackUtil.print(stack);
 
             System.out.println("stack.isEmpty() = " + stack.isEmpty());
 
             while (true) {
-
                 System.out.println("stack.isEmpty() = " + stack.isEmpty());
                 stack.pop();
                 Thread.sleep(1000);
             }
+
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -56,17 +50,5 @@ public class Main {
 
     }
 
-
-    private static void print(Stack<Integer> stack) {
-
-        Node<Integer> first = stack.getTop();
-
-        while (first != null) {
-            System.out.println(first.getData());
-            first = first.getNext();
-        }
-
-        System.out.println("Size = " + stack.size());
-    }
 
 }

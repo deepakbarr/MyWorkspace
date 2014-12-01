@@ -30,7 +30,7 @@ public class Stack<T> {
         ++size;
     }
 
-    public Node<T> pop() {
+    public T pop() {
 
         if (isEmpty()) {
             System.out.print("Error : Can not pop - stack size = " + size());
@@ -40,11 +40,11 @@ public class Stack<T> {
         Node<T> temp = top;
         top = top.getNext();
         --size;
-        return temp;
+        return temp.getData();
     }
 
-    public Node<T> top() {
-        return top;
+    public T top() {
+        return top.getData();
     }
 
     public int size() {

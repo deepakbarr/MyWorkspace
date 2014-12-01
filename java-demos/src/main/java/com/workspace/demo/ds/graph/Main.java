@@ -22,6 +22,8 @@ public class Main {
         graph.addEdge('c', 'd');
 
         graph.bfs(0);
+        graph.dfs(0);
+
 
     }
 }

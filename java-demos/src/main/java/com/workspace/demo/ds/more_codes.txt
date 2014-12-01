@@ -10,3 +10,5 @@ http://www.geeksforgeeks.org/find-the-smallest-window-in-a-string-containing-all
 4. http://www.geeksforgeeks.org/given-a-number-find-next-smallest-palindrome-larger-than-this-number/
 
 5. Snake ladder http://www.geeksforgeeks.org/snake-ladder-problem-2/
+
+6. Clone an LL containing random pointers.

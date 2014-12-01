@@ -1,10 +1,10 @@
 package com.workspace.demo.ds.graph;
 
 import com.workspace.demo.ds.queue.Queue;
-import com.workspace.demo.ds.sort.InsertionSort;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * Created by deepak on 11/25/14.
@@ -94,6 +94,9 @@ public class Graph {
     }
 
     public void bfs(int start) {
+
+        System.out.println("Breath first search");
+
         Queue<Integer> queue = new Queue<Integer>();
         queue.enqueue(start);
         boolean[] visited = new boolean[size];
@@ -111,4 +114,25 @@ public class Graph {
             }
         }
 
+
+    public void dfs(int start) {
+
+        System.out.println("Depth first search");
+
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.push(start);
+        boolean[] visited = new boolean[size];
+
+        while (!stack.isEmpty()) {
+
+            int idx = stack.pop();
+            System.out.println("label = " + vertices[idx].getLabel());
+            visited[idx] = true;
+            List<Integer> neighbours = getAdjacent(idx, visited);
+
+            if (neighbours.size()>=0)
+                for (int i : neighbours)
+                    stack.push(i);
+        }
+    }
 }
