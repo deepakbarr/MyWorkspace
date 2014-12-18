@@ -25,9 +25,9 @@ public class BSTUtil {
 
     public static void postOrder(TreeNode root) {
         if (root != null) {
-            System.out.println(root.getData());
             postOrder(root.getLeft());
             postOrder(root.getRight());
+            System.out.println(root.getData());
         }
     }
 

@@ -31,7 +31,9 @@ public class Permutations {
     }
 
     public static void main(String[] args) {
-        String str = "abc";
+        String str = "rajitha";
+        System.out.println(str.substring(0,0));
+
         Set<String> perms;
 
         perms = new Permutations().generatePermutations(str);
