@@ -1,0 +1,8 @@
+
+to execute -
+
+ ./spark-submit --class spark.WordCount /home/deepak.barr/workspace/spark-demo/target/demo.spark-1.0-SNAPSHOT.jar
+
+ http://www.robertomarchetto.com/spark_java_maven_example
+
+ http://coe4bd.github.io/HadoopHowTo/sparkJava/sparkJava.html
