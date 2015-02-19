@@ -22,7 +22,9 @@ public class DemoService extends Application<DemoServiceConfiguration> {
 
     @Override
     public void run(DemoServiceConfiguration conf, Environment env) throws Exception {
-        DemoResource resource=new DemoResource();
+        DemoResource resource=new DemoResource(conf);
         env.jersey().register(resource);
     }
+
+
 }

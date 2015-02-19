@@ -9,13 +9,13 @@ import io.dropwizard.Configuration;
 public class DemoServiceConfiguration  extends Configuration {
 
     @JsonProperty
-    String message;
+    Messages messages;
 
-    public String getMessage() {
-        return message;
+    public Messages getMessage() {
+        return messages;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMessage(Messages message) {
+        this.messages = message;
     }
 }
