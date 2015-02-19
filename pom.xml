@@ -18,6 +18,7 @@
         <module>untitled1</module>
         <module>flip</module>
         <module>storm</module>
+        <module>dropwizard-service</module>
     </modules>
 
 

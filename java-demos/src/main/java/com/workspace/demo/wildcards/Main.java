@@ -59,7 +59,8 @@ public class Main {
 
         for(Object o:listCar) {
 
-            System.out.println("o = " + o);
+            Car c=(Car)o;
+            System.out.println("o = " + c);
         }
 
 
