@@ -28,7 +28,7 @@ public class DemoResource {
     @Path("hello")
     public Output sayHello() {
         Output out=new Output();
-        out.put("key",healthString);
+        out.put("key",helloString);
         return out;
     }
 

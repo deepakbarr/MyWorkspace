@@ -13,6 +13,7 @@ import io.dropwizard.setup.Environment;
 public class DemoService extends Application<DemoServiceConfiguration> {
 
     public static void main(String[] args) throws Exception {
+        //Can load properties file, cache loaders, workflows schedulars , crons etc etc
         new DemoService().run(args);
     }
 

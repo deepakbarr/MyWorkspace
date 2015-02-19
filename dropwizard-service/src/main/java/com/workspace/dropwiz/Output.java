@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class Output {
 
-    @JsonProperty
+    @JsonProperty("output")
     private Map<String, String> keyValues = new HashMap<String, String>();
 
 
