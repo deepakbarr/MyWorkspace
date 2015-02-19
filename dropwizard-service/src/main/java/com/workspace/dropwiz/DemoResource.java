@@ -26,8 +26,10 @@ public class DemoResource {
      */
     @GET
     @Path("hello")
-    public String sayHello() {
-        return helloString;
+    public Output sayHello() {
+        Output out=new Output();
+        out.put("key",healthString);
+        return out;
     }
 
     /**
@@ -36,8 +38,10 @@ public class DemoResource {
      */
     @GET
     @Path("health")
-    public String health() {
-        return healthString;
+    public Output health() {
+        Output out=new Output();
+        out.put("key",healthString);
+        return out;
     }
 
     /**
@@ -46,7 +50,9 @@ public class DemoResource {
      */
     @GET
     @Path("print")
-    public String printText(@QueryParam("text") String text) {
-        return text;
+    public Output printText(@QueryParam("text") String text) {
+        Output out=new Output();
+        out.put("text",text);
+        return out;
     }
 }
