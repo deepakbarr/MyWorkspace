@@ -18,6 +18,9 @@ public class DemoResource {
     public DemoResource(DemoServiceConfiguration conf) {
         this.healthString = conf.getMessage().getHealth();
         this.helloString = conf.getMessage().getHello();
+
+        System.out.println("healthString = " + healthString);
+        System.out.println("helloString = " + helloString);
     }
 
     /**
@@ -28,7 +31,7 @@ public class DemoResource {
     @Path("hello")
     public Output sayHello() {
         Output out=new Output();
-        out.put("key",helloString);
+        out.put("message",helloString);
         return out;
     }
 
@@ -40,7 +43,7 @@ public class DemoResource {
     @Path("health")
     public Output health() {
         Output out=new Output();
-        out.put("key",healthString);
+        out.put("health",healthString);
         return out;
     }
 
