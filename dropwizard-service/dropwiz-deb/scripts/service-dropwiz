@@ -1,0 +1,34 @@
+start() {
+        export HOME=/home/deepak.barr
+        echo "Starting dropwiz-service"
+        sh $HOME/install/service-drop-wiz/service/start.sh
+        echo "Started dropwiz-service"
+}
+
+stop() {
+        export HOME=/home/deepak.barr
+        echo "Stopping dropwiz-service"sh
+        sh $HOME/install/service-drop-wiz/service/stop.sh
+        echo "Stopped dropwiz-service"
+}
+
+restart() {
+        stop
+        start
+}
+
+case "$1" in
+start)
+        start
+;;
+stop)
+        stop
+;;
+restart)
+        restart
+;;
+*)
+
+exit 1
+;;
+esac
