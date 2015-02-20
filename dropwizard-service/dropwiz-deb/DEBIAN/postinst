@@ -1,0 +1,7 @@
+mkdir -p ~/install/service-drop-wiz/service
+mkdir -p ~/install/service-drop-wiz/conf
+mkdir -p ~/install/service-drop-wiz/log
+cp ../dropwizard-service-1.0-SNAPSHOT.jar ~/install/service-drop-wiz/service
+cp ../service.sh ~/install/service-drop-wiz/service
+cp ../configuration.yml ~/install/service-drop-wiz/service
+sh ~/install/service-drop-wiz/service/service.sh >~/install/service-drop-wiz/log/service-log.log &
