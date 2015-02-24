@@ -1,0 +1,7 @@
+com/app/ds/beans/Status.class
+com/app/ds/servlet/HWServlet.class
+com/app/ds/beans/MyBean.class
+com/app/ds/beans/Quote.class
+com/app/ds/api/YourFirstAPI.class
+com/app/ds/api/QuoteAPI.class
+com/app/ds/QuoteManager.class
