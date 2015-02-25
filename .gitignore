@@ -1,0 +1,7 @@
+*.class
+*.deb
+*.cache
+*.iml
+*/target/*
+.idea/*
+
