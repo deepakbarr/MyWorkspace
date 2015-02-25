@@ -12,7 +12,7 @@ public class HWServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) {
         try {
-            resp.getWriter().print("Hello, GAE");
+            resp.getWriter().print("Hello, This is data manager !!");
         } catch (IOException e) {
             e.printStackTrace();
         }

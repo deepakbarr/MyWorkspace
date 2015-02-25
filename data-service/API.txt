@@ -1,0 +1,24 @@
+
+Prod host - nimble-card-866.appspot.com
+----------------------------------------
+http://nimble-card-866.appspot.com/_ah/api/data/v1/fetch/$type
+http://nimble-card-866.appspot.com/_ah/api/data/v1/sendQuote/$type/$data (space by %20)
+http://nimble-card-866.appspot.com/_ah/api/data/v1/size/$type
+http://nimble-card-866.appspot.com/_ah/api/data/v1/fetchAll/$type
+http://nimble-card-866.appspot.com/_ah/api/data/v1/flush/$type
+http://nimble-card-866.appspot.com/_ah/api/data/v1/flushAll
+http://nimble-card-866.appspot.com/_ah/api/data/v1/fetchTypes
+http://nimble-card-866.appspot.com/_ah/api/data/v1/remove/$type/$data (space by %20)
+
+
+
+Local host API
+---------------
+http://localhost:8080/_ah/api/data/v1/fetch/$type
+http://localhost:8080/_ah/api/data/v1/sendQuote/$type/$data (space by %20)
+http://localhost:8080/_ah/api/data/v1/size/$type
+http://localhost:8080/_ah/api/data/v1/fetchAll/$type
+http://localhost:8080/_ah/api/data/v1/flush/$type
+http://localhost:8080/_ah/api/data/v1/flushAll
+http://localhost:8080/_ah/api/data/v1/fetchTypes
+http://localhost:8080/_ah/api/data/v1/remove/$type/$data (space by %20)
