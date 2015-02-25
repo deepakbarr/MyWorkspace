@@ -1,6 +1,0 @@
-com/app/ds/DataManager.class
-com/app/ds/beans/Constants.class
-com/app/ds/servlet/HWServlet.class
-com/app/ds/api/DataAPI.class
-com/app/ds/beans/Response.class
-com/app/ds/api/HealthAPI.class
