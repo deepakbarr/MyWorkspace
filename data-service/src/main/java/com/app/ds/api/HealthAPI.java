@@ -20,4 +20,6 @@ public class HealthAPI {
         response.put("Health", Constants.OK);
         return response;
     }
+
 }
+
