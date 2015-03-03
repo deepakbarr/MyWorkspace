@@ -1,7 +1,7 @@
 
 to execute -
 
- ./spark-submit --class spark.WordCount /home/deepak.barr/workspace/spark-demo/target/demo.spark-1.0-SNAPSHOT.jar
+ ./spark-submit --class spark.WordCount /Users/deepak.barr/coderep/MyWorkspace/spark-demo/target/demo.spark-1.0-SNAPSHOT.jar
 
  http://www.robertomarchetto.com/spark_java_maven_example
 

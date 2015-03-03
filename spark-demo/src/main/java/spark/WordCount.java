@@ -15,8 +15,8 @@ import java.util.Arrays;
  */
 public class WordCount {
 
-    private static String input = "/home/deepak.barr/workspace/spark-demo/src/main/files/input.txt";
-    private static String output = "/home/deepak.barr/workspace/spark-demo/src/main/files/output";
+    private static String input = "/Users/deepak.barr/coderep/MyWorkspace/spark-demo/src/main/files/input.txt";
+    private static String output = "/Users/deepak.barr/coderep/MyWorkspace/spark-demo/src/main/files/output";
 
     public static void main(String[] args) {
         JavaSparkContext spark = new JavaSparkContext("local",
