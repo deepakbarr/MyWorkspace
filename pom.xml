@@ -19,6 +19,7 @@
         <module>data-service</module>
         <module>rest-client</module>
         <module>map-reduce</module>
+        <module>javascript-demo</module>
     </modules>
 
     <dependencies>
