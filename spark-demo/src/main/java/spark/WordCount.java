@@ -1,5 +1,6 @@
 package spark;
 
+import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
@@ -15,15 +16,26 @@ import java.util.Arrays;
  */
 public class WordCount {
 
-    private static String input = "/Users/deepak.barr/coderep/MyWorkspace/spark-demo/src/main/files/input.txt";
-    private static String output = "/Users/deepak.barr/coderep/MyWorkspace/spark-demo/src/main/files/output";
+    private static String input = "/Users/deepak.barr/coderep/MyWorkspace/spark-demo/src/main/files/wc/input/input.txt";
+    private static String output = "/Users/deepak.barr/coderep/MyWorkspace/spark-demo/src/main/files/wc/output";
+
+    private static String inputHDFS = "/user/spark/wc/input/input.txt";
+    private static String outputHDFS = "/user/spark/wc/output";
+
+    private static boolean useHadoop=true;
+
 
     public static void main(String[] args) {
-        JavaSparkContext spark = new JavaSparkContext("local",
-                "Java Wordcount", System.getenv("SPARK_HOME"),
-                JavaSparkContext.jarOfClass(WordCount.class));
 
-        JavaRDD<String> file = spark.textFile(input);
+//        SparkConf sparkConf=new SparkConf();
+
+        JavaSparkContext spark=new JavaSparkContext(new SparkConf());
+//        JavaSparkContext spark = new JavaSparkContext("local[1]",
+//                "Java Wordcount", System.getenv("SPARK_HOME"),
+//                JavaSparkContext.jarOfClass(WordCount.class));
+
+
+        JavaRDD<String> file = spark.textFile(useHadoop?inputHDFS:input);
 
         JavaRDD<String> words = file.flatMap(new FlatMapFunction<String, String>() {
             public Iterable<String> call(String s) {
@@ -40,6 +52,6 @@ public class WordCount {
                 return a + b;
             }
         });
-        counts.saveAsTextFile(output);
+        counts.saveAsTextFile(useHadoop?outputHDFS:output);
     }
 }

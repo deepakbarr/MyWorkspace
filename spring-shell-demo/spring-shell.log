@@ -1,0 +1,15 @@
+// Spring Shell 1.0.0.RELEASE log opened at 2015-04-25 01:02:20
+echo "deepak"
+echo "ddfdgd"
+help
+date
+help
+exit
+// Spring Shell 1.0.0.RELEASE log closed at 2015-04-25 01:07:10
+// Spring Shell 1.0.0.RELEASE log opened at 2015-04-25 01:07:39
+echo d
+echo hey pal
+echo "he d d d d"
+echo 2+2
+exit
+// Spring Shell 1.0.0.RELEASE log closed at 2015-04-25 01:08:09

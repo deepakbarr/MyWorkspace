@@ -1,4 +1,4 @@
-package spark;
+package com.workspace.lens;
 
 /**
  * Hello world!

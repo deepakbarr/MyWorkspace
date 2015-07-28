@@ -1,7 +1,18 @@
 
-to execute -
+To execute on local
 
- ./spark-submit --class spark.WordCount /Users/deepak.barr/coderep/MyWorkspace/spark-demo/target/demo.spark-1.0-SNAPSHOT.jar
+ $SPARK_HOME/bin/spark-submit --master local --class spark.WordCount /Users/deepak.barr/coderep/MyWorkspace/spark-demo/target/demo.spark-1.0-SNAPSHOT.jar
+
+To execute on YARN
+
+Only config is set HADOOP_CONF_DIR
+
+
+ $SPARK_HOME/bin/spark-submit --master yarn-cluster --class spark.FilterLogs /Users/deepak.barr/coderep/MyWorkspace/spark-demo/target/demo.spark-1.0-SNAPSHOT.jar
+
+OR
+
+ $SPARK_HOME/bin/spark-submit --master yarn-client --class spark.FilterLogs /Users/deepak.barr/coderep/MyWorkspace/spark-demo/target/demo.spark-1.0-SNAPSHOT.jar
 
  http://www.robertomarchetto.com/spark_java_maven_example
 

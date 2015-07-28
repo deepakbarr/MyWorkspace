@@ -20,6 +20,12 @@
         <module>rest-client</module>
         <module>map-reduce</module>
         <module>javascript-demo</module>
+        <module>spark-demo</module>
+        <module>spring-shell-demo</module>
+        <module>java-mock</module>
+        <module>order-status</module>
+        <module>java-servlet</module>
+        <module>lens-client</module>
     </modules>
 
     <dependencies>

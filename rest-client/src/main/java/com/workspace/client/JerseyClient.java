@@ -3,30 +3,68 @@ package com.workspace.client;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
-import org.codehaus.jackson.map.ObjectMapper;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
-public class JerseyClient
-{
+import java.lang.Object;
+import java.util.Iterator;
+
+public class JerseyClient {
+
+
+    class Order {
+        private String seller;
+        private String orderId;
+        private String status;
+        private String lastUpdated;
+
+
+        public Order() {
+        }
+
+        @Override
+        public String toString() {
+            return "Order{" +
+                    "seller='" + seller + '\'' +
+                    ", orderId='" + orderId + '\'' +
+                    ", status='" + status + '\'' +
+                    ", lastUpdated='" + lastUpdated + '\'' +
+                    '}';
+        }
+    }
 
     public static void main(String[] args) {
         try {
 
             Client client = Client.create();
 
-            WebResource webResource = client
-                        .resource("https://nimble-card-866.appspot.com/_ah/api/data/v1/size/quote");
-
+            WebResource webResource = client.resource("http://172.20.201.232:8080/service/orders");
             ClientResponse clientResponse = webResource.accept("application/json")
                     .get(ClientResponse.class);
+            String jsonResponse = clientResponse.getEntity(String.class);
 
-            String out= clientResponse.getEntity(String.class);
+            System.out.println("jsonResponse = " + jsonResponse);
 
-            ObjectMapper mapper = new ObjectMapper();
-            Response response=mapper.readValue(out, Response.class);
-            for(String key:response.keySet()) {
-                System.out.println("key = " + key);
-                System.out.println("response.v = " + response.get(key));
+            JSONParser parser = new JSONParser();
+            Object obj = parser.parse(jsonResponse);
+            JSONArray jsonArray = (JSONArray)obj;
+            Iterator<JSONObject> iterator = jsonArray.iterator();
+            while (iterator.hasNext()) {
+                JSONObject order = (JSONObject) iterator.next();
+                String seller = (String) order.get("seller");
+                System.out.println(seller);
             }
+
+
+//            ObjectMapper mapper = new ObjectMapper();
+//            TypeFactory typeFactory=mapper.getTypeFactory();
+//
+//            List<Order> orders =
+//                    mapper.readValue(jsonResponse, typeFactory.constructCollectionType(List.class, Order.class));
+
+//            for(Order order:orders)
+//                System.out.println(order);
 
         } catch (Exception e) {
 

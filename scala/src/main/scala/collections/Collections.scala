@@ -18,7 +18,6 @@ class Collections {
 
   def printMap(map: Map[String, Int]): Unit = {
 
-
     for (element <- map.keys) {
       print(element)
       print("---");

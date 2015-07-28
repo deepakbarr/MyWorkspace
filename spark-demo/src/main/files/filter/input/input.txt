@@ -1,0 +1,13 @@
+ERROR 1 error occured !
+INFO  nothing happened !
+WARN 1 warning occured !
+ERROR 2 error occured !
+INFO 2 nothing happened !
+WARN 2 warning occured !
+ERROR 3 error occured !
+INFO 3 nothing happened !
+WARN 3 warning occured !
+ERROR 4 error occured !
+INFO 4 nothing happened !
+WARN 4 warning occured !
+
