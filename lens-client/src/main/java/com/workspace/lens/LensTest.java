@@ -16,9 +16,9 @@ import com.workspace.lens.client.LensClient;
 public class LensTest {
 
   public static LensClient lensClient;
-  private static String HOST = "localhost";
+  private static String HOST = "bigfoot-hydra-a-0011.nm.flipkart.com";
   private static int PORT = 9999;
-  private static String QUERY = "select * from default.test_data limit 10";
+  private static String QUERY = "select * from bigfoot_dart.dart_fkmp_sp_seller_support_sellerissue_2 limit 22";
 
   /**
    * Load configuration properties like HostName, PortNumber etc
@@ -35,15 +35,15 @@ public class LensTest {
     headers.put("FDP-Lens-Api-Key", "ce5234ac-a24b-4fe4-8679-2ebac0ec941c");
     headers.put("Content-Disposition", "form-data");
 
-
     Response lensSession = lensClient.createLensSession("deepak.barr", "abcd", getSessionConf(), headers);
 
-    System.out.println("sessionHandle -");
     lensSession.getBody().prettyPrint();
     String sessionId = lensSession.getBody().asString();
+    System.out.println("sessionid=" + sessionId);
     Response lensQuery = lensClient.makeLensQuery(sessionId, QUERY, "EXECUTE", headers);
 
     String xmlReponse = lensQuery.getBody().asString();
+
     String handleId = from(xmlReponse).get("lensResponse.data.handleId");
     System.out.println("\n\nhandleId = " + handleId);
 
@@ -57,7 +57,7 @@ public class LensTest {
       String xml = lensPollQueryResponse.getBody().asString();
       queryStatus = getQueryStatus(xml);
       System.out.println("\nQuery Status : " + queryStatus);
-    } while (!queryStatus.equalsIgnoreCase("SUCCESSFUL"));
+    } while (!(queryStatus.equalsIgnoreCase("SUCCESSFUL")|| queryStatus.equalsIgnoreCase("FAILED")));
     headers.remove("Content-Disposition");
 
     Response lensQueryResultSet = lensClient.getLensQueryResultSet(sessionId, handleId, headers);
@@ -69,11 +69,9 @@ public class LensTest {
     lensQueryHttpResultSet.getBody().prettyPrint();
   }
 
-  private static String getSessionConf() {
-    SessionProperties sessionProperties = new SessionProperties();
-    sessionProperties.init();
-    System.out.println("sessionProperties = " + sessionProperties.getprops());
-    return sessionProperties.getprops();
+  private static String getSessionConf() throws IOException {
+    System.out.println("sessionProperties = " + SessionProperties.instance().getprops());
+    return SessionProperties.instance().getprops();
   }
 
   public static String getQueryStatus(String xml) {

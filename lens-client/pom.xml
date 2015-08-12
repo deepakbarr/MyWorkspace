@@ -16,6 +16,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <authn.version>15.07.17.1</authn.version>
     </properties>
 
     <dependencies>
@@ -25,6 +26,13 @@
             <artifactId>rest-assured</artifactId>
             <version>2.4.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.flipkart.kloud.authn</groupId>
+            <artifactId>client</artifactId>
+            <version>${authn.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

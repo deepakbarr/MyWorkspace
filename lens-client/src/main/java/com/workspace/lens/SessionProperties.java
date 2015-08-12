@@ -1,19 +1,27 @@
 package com.workspace.lens;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 /**
  * Created by deepak.barr on 28/07/15.
  */
 public class SessionProperties {
-  public static String LENS_PERSISTENCE = "lens.query.enable.persistent.resultset";
-  public static String DRIVER_PERSISTENCE = "lens.query.enable.persistent.resultset.indriver";
-  public Map<String, String> properties = new HashMap();
+  public Properties properties = new Properties();
 
-  public void init() {
-    properties.put(LENS_PERSISTENCE, "true");
-//    properties.put(DRIVER_PERSISTENCE, "false");
+  public static SessionProperties instance() throws IOException {
+    SessionProperties sessionProperties = new SessionProperties();
+    sessionProperties.init();
+    return sessionProperties;
+  }
+
+  public void init() throws IOException {
+    properties.load(
+      new FileInputStream("/Users/deepak.barr/coderep/MyWorkspace/lens-client/src/main/resources/session.properties"));
   }
 
   public String getprops() {
@@ -22,7 +30,7 @@ public class SessionProperties {
     sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
     sb.append("<conf>");
     sb.append("<properties>");
-    for (String key : properties.keySet()) {
+    for (String key : properties.stringPropertyNames()) {
       sb.append("<entry>");
       sb.append("<key>");
       sb.append(key);
