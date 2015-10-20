@@ -1,0 +1,51 @@
+package com.workspace.lens;
+
+import org.apache.commons.mail.Email;
+import org.apache.commons.mail.SimpleEmail;
+
+import com.google.common.base.Throwables;
+
+/**
+ * Created by deepak.barr on 10/09/15.
+ */
+public class TestMail {
+
+
+  public static void main(String[] args) {
+    sendMail("test","test");
+
+  }
+
+  private static Email createEmailInstance() throws Exception {
+    Email email = new SimpleEmail();
+//    email.setAuthentication("postman", "gDt3^hdJPdjs8d");
+    email.setAuthentication("postman", "gDt3^hdJPdjs8");
+    email.setHostName("10.33.102.104");
+//    email.setSmtpPort(Integer.parseInt(ConfigManager.get("mail.server.port", "25")));
+    email.setFrom("deepak.barr@flipkart.com");
+    email.addTo("deepak.barr@flipkart.com");
+    return email;
+  }
+
+  public static void sendMail(String subject, String message) {
+    try {
+      Email email = createEmailInstance();
+      email.setSubject(subject);
+      email.setMsg(message);
+      email.send();
+    } catch (Exception ex) {
+      ex.printStackTrace();
+    }
+  }
+
+  public static void sendMail(String subject, Exception e) {
+    try {
+      Email email = createEmailInstance();
+      email.setSubject(subject);
+      email.setMsg(Throwables.getStackTraceAsString(e));
+      email.send();
+    } catch (Exception ex) {
+      ex.printStackTrace();
+    }
+  }
+}

@@ -1,0 +1,35 @@
+ <property>
+    <name>lens.query.result.parent.dir</name>
+    <value>hdfs://localhost:9000/tmp</value>
+    <description>The directory for storing persisted result of query. This
+      directory should exist and should have writable permissions by lens server
+    </description>
+  </property>
+
+<property>
+    <name>lens.query.hdfs.output.path</name>
+    <value>queryresult</value>
+    <description>The directory under the parent result directory, in which HiveDriver
+      will persist the results, if persisting by driver is enabled. This directory
+      should exist and should have world writable permissions sothat all users will
+      be able put query outputs here.
+    </description>
+  </property>
+
+  <property>
+    <name>lens.server.resultset.purge.enabled</name>
+    <value>true</value>
+    <description>Whether to purge the resultset </description>
+  </property>
+
+  <property>
+    <name>lens.server.resultsetpurger.sleep.interval</name>
+    <value>120</value>
+    <description>The interval(seconds) with which purger to run periodically. Default 1 hour. </description>
+  </property>
+
+  <property>
+    <name>lens.server.query.resultset.retention</name>
+    <value>5</value>
+    <description>Query resultset retention period in days </description>
+  </property>

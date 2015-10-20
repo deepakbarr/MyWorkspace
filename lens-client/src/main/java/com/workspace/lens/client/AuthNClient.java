@@ -12,9 +12,9 @@ import com.flipkart.kloud.authn.PrivateKeyCredential;
  */
 public class AuthNClient {
   private static final String authnUrl = "https://kloud-authn-0001.ch.flipkart.com/openid-connect-server-webapp";
-  private static  final String privateKeyPath="";
-  private static final String clientId="";
-  private static final String targetClientId="";
+  private static  final String privateKeyPath="/Users/deepak.barr/coderep/MyWorkspace/lens-client/src/main/resources/key/private.pem";
+  private static final String clientId="lens-test-client";
+  private static final String targetClientId="apache-lens";
 
   public static String getAuthHeader() throws NoSuchAlgorithmException, IOException, InvalidKeySpecException {
     PrivateKeyCredential privateKeyCredential = PrivateKeyCredential.fromPemFile(clientId, privateKeyPath);
@@ -22,5 +22,9 @@ public class AuthNClient {
     String header = tokenService.fetchToken(targetClientId).toAuthorizationHeader();
     System.out.println("header = " + header);
     return header;
+  }
+
+  public static void main(String[] args) throws NoSuchAlgorithmException, IOException, InvalidKeySpecException {
+      getAuthHeader();
   }
 }

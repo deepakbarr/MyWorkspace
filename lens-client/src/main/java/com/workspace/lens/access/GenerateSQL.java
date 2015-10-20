@@ -17,13 +17,20 @@ public class GenerateSQL {
       "(ALLOW_DENY, PRIVILEGE_REGEX, RESOURCE_PATH_REGEX, RESOURCE_TYPE_REGEX, ROLE_ID)" +
       "VALUES('ALLOW','%s','%s','%s',%s);";
 
+  private static String USER_PRIVILEGE_QUERY =
+    "INSERT INTO USER_PRIVILEGE " +
+      "(ALLOW_DENY, PRIVILEGE_REGEX, RESOURCE_PATH_REGEX, RESOURCE_TYPE_REGEX, USER_ID)" +
+      "VALUES('ALLOW','%s','%s','%s',%s);";
+
+
   public static void main(String[] args) {
     List<String> tableList = getTableList();
 
     for (String table : tableList) {
       String regex = Values.DB + "/" + table;
       System.out.println(
-        String.format(ROLE_PRIVILEGE_QUERY, Values.PRIVILEGE_REGEX, regex, Values.RESOURCE_TYPE_REGEX, Values.ID));
+        String
+          .format(Values.ACCESS_LEVEL==PRIVILEGE.USER?USER_PRIVILEGE_QUERY:ROLE_PRIVILEGE_QUERY, Values.PRIVILEGE_REGEX, regex, Values.RESOURCE_TYPE_REGEX, Values.ID));
     }
   }
 
@@ -53,9 +60,15 @@ public class GenerateSQL {
   }
 }
 
+enum PRIVILEGE {
+  USER, ROLE;
+}
+
 class Values {
-  public static int ID = 11346;
+  public static PRIVILEGE ACCESS_LEVEL = PRIVILEGE.USER;
+  public static int ID = 2460;
   public static String DB = "bigfoot_dart";
   public static String PRIVILEGE_REGEX = "TABLE_ACCESS";
   public static String RESOURCE_TYPE_REGEX = "TABLE";
+
 }

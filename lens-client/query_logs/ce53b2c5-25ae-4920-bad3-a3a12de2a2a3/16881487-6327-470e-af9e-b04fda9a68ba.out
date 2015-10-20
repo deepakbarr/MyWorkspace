@@ -1,0 +1,21 @@
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1442856584667_0002, Tracking URL = http://flipkart:8088/proxy/application_1442856584667_0002/
+Kill Command = /Users/deepak.barr/Softwares/hadoop-2.6.0/bin/hadoop job  -kill job_1442856584667_0002
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2015-09-21 23:17:56,009 Stage-1 map = 0%,  reduce = 0%
+2015-09-21 23:18:13,312 Stage-1 map = 100%,  reduce = 0%
+2015-09-21 23:18:28,640 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1442856584667_0002
+Moving data to: hdfs://localhost:9000/user/deepak.barr/tmp/hdfsout/0b239487-666a-4d99-8035-5f030b1dd7d5
+MapReduce Jobs Launched: 
+Job 0: Map: 1  Reduce: 1   HDFS Read: 4315 HDFS Write: 548 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
