@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
@@ -23,8 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="spark-demo" />
+        <module name="demo.spark" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo.spark" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

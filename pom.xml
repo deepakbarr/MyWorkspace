@@ -26,6 +26,7 @@
         <module>order-status</module>
         <module>java-servlet</module>
         <module>lens-client</module>
+        <module>flipkart-stuff</module>
     </modules>
 
     <dependencies>

@@ -86,17 +86,17 @@
             <version>${authn.version}</version>
         </dependency>
 
-        <!--<dependency>-->
-                <!--<groupId>org.apache.hive</groupId>-->
-                <!--<artifactId>hive-jdbc</artifactId>-->
-                <!--<version>1.1.0</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<groupId>org.slf4j</groupId>-->
-                    <!--<artifactId>slf4j-log4j12</artifactId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
-        <!--</dependency>-->
+        <dependency>
+                <groupId>org.apache.hive</groupId>
+                <artifactId>hive-jdbc</artifactId>
+                <version>0.13.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
 
         <dependency>
