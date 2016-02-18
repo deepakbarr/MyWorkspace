@@ -1,34 +1,39 @@
-//package com.workspace.lens;
-//
-//import java.text.DateFormat;
-//import java.text.SimpleDateFormat;
-//import java.time.Instant;
-//import java.util.Date;
-//import java.util.Locale;
-//import java.util.TimeZone;
-//
-//import org.joda.time.format.DateTimeFormatter;
-//import org.joda.time.format.ISODateTimeFormat;
-//
-///**
-// * Hello world!
-// *
-// */
-//public class App
-//{
-//    public static void main( String[] args )
-//    {
-//        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ", Locale.US);
-//        df.setTimeZone(TimeZone.getTimeZone("IST"));
-//        String output = df.format(new Date());
-//        System.out.println("output = " + output);
-//        DateTimeFormatter dtf = ISODateTimeFormat.dateTime();
-//        System.out.println(ISODateTimeFormat.dateTime());
-//
-//        System.out.println("Instant.now().toString(); = " + Instant.now().toString());
-//
-////        DateTimeFormatter formatter = DateTimeFormat.forPattern( "MM/dd/yyyy" ).withZone( timeZone );
-//
-//
-//    }
-//}
+package com.workspace.lens;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+/**
+ * Hello world!
+ */
+class MyException extends Exception
+{
+  public MyException(String msg) {
+    super(msg);
+  }
+}
+
+class MyException2 extends Exception
+{
+  public MyException2(String msg) {
+    super(msg);
+  }
+}
+
+public class App {
+  public static void main(String[] args) throws Exception {
+
+    try {
+
+      throw new MyException("myexp");
+    } catch (MyException e) {
+      System.out.println(e.getMessage());
+      throw new MyException2("myexp2");
+    } catch (Exception e) {
+      System.out.println("AAA");
+    }
+  }
+}
+

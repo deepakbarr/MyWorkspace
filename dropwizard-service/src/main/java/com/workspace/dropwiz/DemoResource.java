@@ -2,6 +2,7 @@ package com.workspace.dropwiz;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.NoContentException;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -139,6 +140,12 @@ public class DemoResource {
     tb.setF2(Arrays.asList(new String[]{"1","2"}));
     tb.setF3("CCCC");
     return tb;
+  }
+
+  @GET
+  @Path("gone")
+  public TestBean getJsonException() {
+    throw new ClientErrorException("Its gone ", 410);
   }
 
   @POST

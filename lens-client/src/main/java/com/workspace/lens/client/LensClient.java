@@ -2,6 +2,7 @@ package com.workspace.lens.client;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.builder.RequestSpecBuilder;
@@ -45,7 +46,7 @@ public class LensClient {
   }
 
   public Response createLensSession(String username, String password, String sessionConf,
-                                    HashMap<String, String> headers) {
+                                    Map<String, String> headers) {
 
 //    System.out.println("[LensClient]:username = [" + username + "], password = [" + password + "]");
 
@@ -58,7 +59,7 @@ public class LensClient {
     return RestAssured.given().spec(requestSpec).post();
   }
 
-  public Response makeLensQuery(String sessionId, String query, String operation, HashMap<String, String> headers) {
+  public Response makeLensQuery(String sessionId, String query, String operation, Map<String, String> headers) {
 
     RequestSpecification requestSpec = new RequestSpecBuilder().setBaseUri(constructLensQueryUrl())
       .addHeaders(headers).setContentType("multipart/form-data").addMultiPart("sessionid", sessionId)
@@ -67,7 +68,7 @@ public class LensClient {
     return RestAssured.given().spec(requestSpec).post();
   }
 
-  public Response pollLensQuery(String sessionId, String handleId, HashMap<String, String> headers) {
+  public Response pollLensQuery(String sessionId, String handleId, Map<String, String> headers) {
 
 //    System.out.println("[LensClient]:sessionId = [" + sessionId + "], handleId = [" + handleId + "]");
 
@@ -77,7 +78,7 @@ public class LensClient {
     return RestAssured.given().spec(requestSpec).get();
   }
 
-  public Response getLensQueryResultSet(String sessionId, String handleId, HashMap<String, String> headers) {
+  public Response getLensQueryResultSet(String sessionId, String handleId, Map<String, String> headers) {
 //    System.out.println("[LensClient]:sessionId = [" + sessionId + "], handleId = [" + handleId + "]");
 
     System.out.println("constructGetResultSetUrl(handleId) = " + constructGetResultSetUrl(handleId)+"sessionid="+sessionId.replaceAll("\n",""));
@@ -86,7 +87,7 @@ public class LensClient {
     return RestAssured.given().spec(requestSpec).get();
   }
 
-  public Response getLensQueryHttpResultSet(String sessionId, String handleId, HashMap<String, String> headers) {
+  public Response getLensQueryHttpResultSet(String sessionId, String handleId, Map<String, String> headers) {
     RequestSpecification requestSpec = new RequestSpecBuilder().setBaseUri(constructGetHTTPResultSetUrl(handleId)
     ).addHeaders(headers).setContentType("application/json").addQueryParam("sessionid", sessionId).build();
     return RestAssured.given().spec(requestSpec).get();

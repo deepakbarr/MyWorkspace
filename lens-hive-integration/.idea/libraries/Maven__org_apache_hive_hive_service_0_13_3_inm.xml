@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.hive:hive-service:0.13.3-inm">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/hive/hive-service/0.13.3-inm/hive-service-0.13.3-inm.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/hive/hive-service/0.13.3-inm/hive-service-0.13.3-inm-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/hive/hive-service/0.13.3-inm/hive-service-0.13.3-inm-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

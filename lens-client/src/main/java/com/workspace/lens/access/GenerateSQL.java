@@ -65,9 +65,9 @@ enum PRIVILEGE {
 }
 
 class Values {
-  public static PRIVILEGE ACCESS_LEVEL = PRIVILEGE.USER;
-  public static int ID = 2460;
-  public static String DB = "bigfoot_dart";
+  public static PRIVILEGE ACCESS_LEVEL = PRIVILEGE.ROLE;
+  public static int ID = 11350;
+  public static String DB = "bigfoot_journal";
   public static String PRIVILEGE_REGEX = "TABLE_ACCESS";
   public static String RESOURCE_TYPE_REGEX = "TABLE";
 

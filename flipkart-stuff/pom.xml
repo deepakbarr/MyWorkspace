@@ -35,6 +35,17 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.flipkart.specter</groupId>
+            <artifactId>specter-client</artifactId>
+            <version>1.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lens</groupId>
+            <artifactId>lens-client</artifactId>
+            <version>2.5.0-beta-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
     <repositories>
         <repository>
