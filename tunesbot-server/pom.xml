@@ -3,16 +3,11 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-    <artifactId>MyWorkspace</artifactId>
-    <groupId>com.workspace.demos</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <groupId>com.app.ds</groupId>
-    <artifactId>data-service</artifactId>
+    <groupId>com.hackathon.tunesbot</groupId>
+    <artifactId>tunesbot-server</artifactId>
 
     <properties>
         <appengine.app.version>1</appengine.app.version>

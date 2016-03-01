@@ -15,12 +15,10 @@
 
     Local host API
     ---------------
-    http://localhost:8082/_ah/api/data/v1/fetch/$type
-    http://localhost:8082/_ah/api/data/v1/sendQuote/$type/$data (space by %20)
-    http://localhost:8082/_ah/api/data/v1/size/$type
-    http://localhost:8082/_ah/api/data/v1/fetchAll/$type
-    http://localhost:8082/_ah/api/data/v1/flush/$type
-    http://localhost:8082/_ah/api/data/v1/flushAll
-    http://localhost:8082/_ah/api/data/v1/fetchTypes
-    http://localhost:8082/_ah/api/data/v1/remove/$type/$data (space by %20)
+    http://localhost:8082/_ah/api/data/v1/get/$key
+    http://localhost:8082/_ah/api/data/v1/publish/$top_billboard/$some_data
+    http://localhost:8082/_ah/api/data/v1/size
+    http://localhost:8082/_ah/api/data/v1/getAll
+    http://localhost:8082/_ah/api/data/v1/delete/$key
+    http://localhost:8082/_ah/api/data/v1/deleteAll
     http://localhost:8082/_ah/api/health/v1/health
