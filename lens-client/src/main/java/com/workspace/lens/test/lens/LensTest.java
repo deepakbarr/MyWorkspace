@@ -20,10 +20,9 @@ import com.workspace.lens.client.LensClient;
 public class LensTest {
 
   public static LensClient lensClient;
-  //  private static String HOST = "bigfoot-hydra-a-0011.nm.flipkart.com";
-//  private static String HOST = "bigfoot-query-lens-0001.nm.flipkart.com";
+
   private static String HOST = "localhost";
-//  private static String HOST = "10.33.106.138";
+
   private static int PORT = 9999;
 //    private static String QUERY = "select B.date_dim_key, A.count from (select day, count(*) as count from bigfoot_dart.dart_wsr_scp_ekl_shipment_1_4 group by day) A right join \n" +
 //      "bigfoot_external_neo.scp_oms__date_dim_fact B on A.day=B.date_dim_key limit 2";
