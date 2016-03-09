@@ -47,11 +47,5 @@
         </dependency>
 
     </dependencies>
-    <repositories>
-        <repository>
-            <id>flipkart.central</id>
-            <url>http://artifactory.nm.flipkart.com:8081/artifactory/libs-release</url>
-        </repository>
-    </repositories>
 
 </project>
